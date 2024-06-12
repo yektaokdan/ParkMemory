@@ -1,4 +1,4 @@
-# Car Parking Location Saver
+# ParkMemory
 
 ## Summary
 
@@ -15,12 +15,12 @@ This project is an iOS application that allows users to save the location where 
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/your-repository/car-parking-location-saver.git
+    git clone https://github.com/yektaokdan/ParkMemory.git
     ```
 2. **Open the project in Xcode**:
     ```sh
-    cd car-parking-location-saver
-    open CarParkingLocationSaver.xcodeproj
+    cd ParkMemory
+    open ParkMemory.xcodeproj
     ```
 3. **Install dependencies** (if any, e.g., via CocoaPods):
     ```sh
