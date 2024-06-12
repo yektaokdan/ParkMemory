@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59A3BC452C19715D003134E9 /* LocationsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3BC442C19715D003134E9 /* LocationsVM.swift */; };
+		59A3BC472C1974DC003134E9 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3BC462C1974DC003134E9 /* NotificationExtension.swift */; };
 		59A87F062C1844E800F0193C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F052C1844E800F0193C /* AppDelegate.swift */; };
 		59A87F082C1844E800F0193C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F072C1844E800F0193C /* SceneDelegate.swift */; };
 		59A87F0F2C1844E900F0193C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A87F0E2C1844E900F0193C /* Assets.xcassets */; };
 		59A87F122C1844E900F0193C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 59A87F112C1844E900F0193C /* Base */; };
 		59A87F1E2C1846AC00F0193C /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F1D2C1846AC00F0193C /* MapViewVC.swift */; };
-		59A87F202C18472700F0193C /* SettingsViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F1F2C18472700F0193C /* SettingsViewVC.swift */; };
+		59A87F202C18472700F0193C /* LocationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F1F2C18472700F0193C /* LocationsVC.swift */; };
 		59A87F222C185E4500F0193C /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F212C185E4500F0193C /* MapVM.swift */; };
 		59A87F242C18650B00F0193C /* PMCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F232C18650B00F0193C /* PMCustomButton.swift */; };
 		59A87F262C18853A00F0193C /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A87F252C18853A00F0193C /* UserDefaultsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59A3BC442C19715D003134E9 /* LocationsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsVM.swift; sourceTree = "<group>"; };
+		59A3BC462C1974DC003134E9 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		59A87F022C1844E800F0193C /* ParkMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A87F052C1844E800F0193C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59A87F072C1844E800F0193C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +30,7 @@
 		59A87F112C1844E900F0193C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59A87F132C1844E900F0193C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A87F1D2C1846AC00F0193C /* MapViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
-		59A87F1F2C18472700F0193C /* SettingsViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVC.swift; sourceTree = "<group>"; };
+		59A87F1F2C18472700F0193C /* LocationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsVC.swift; sourceTree = "<group>"; };
 		59A87F212C185E4500F0193C /* MapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVM.swift; sourceTree = "<group>"; };
 		59A87F232C18650B00F0193C /* PMCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMCustomButton.swift; sourceTree = "<group>"; };
 		59A87F252C18853A00F0193C /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
@@ -43,6 +47,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59A3BC482C197734003134E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59A87F1D2C1846AC00F0193C /* MapViewVC.swift */,
+				59A87F1F2C18472700F0193C /* LocationsVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59A3BC492C19773F003134E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				59A87F212C185E4500F0193C /* MapVM.swift */,
+				59A3BC442C19715D003134E9 /* LocationsVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		59A3BC4A2C19775B003134E9 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				59A87F232C18650B00F0193C /* PMCustomButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		59A3BC4B2C197769003134E9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				59A87F252C18853A00F0193C /* UserDefaultsExtension.swift */,
+				59A3BC462C1974DC003134E9 /* NotificationExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		59A87EF92C1844E800F0193C = {
 			isa = PBXGroup;
 			children = (
@@ -63,13 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				59A87F192C18456A00F0193C /* App */,
+				59A3BC4B2C197769003134E9 /* Extension */,
+				59A3BC4A2C19775B003134E9 /* CustomViews */,
+				59A3BC492C19773F003134E9 /* ViewModels */,
+				59A3BC482C197734003134E9 /* Views */,
 				59A87F1B2C18457700F0193C /* Resources */,
 				59A87F1A2C18456D00F0193C /* Support */,
-				59A87F1D2C1846AC00F0193C /* MapViewVC.swift */,
-				59A87F1F2C18472700F0193C /* SettingsViewVC.swift */,
-				59A87F212C185E4500F0193C /* MapVM.swift */,
-				59A87F252C18853A00F0193C /* UserDefaultsExtension.swift */,
-				59A87F232C18650B00F0193C /* PMCustomButton.swift */,
 			);
 			path = ParkMemory;
 			sourceTree = "<group>";
@@ -171,8 +209,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59A87F222C185E4500F0193C /* MapVM.swift in Sources */,
-				59A87F202C18472700F0193C /* SettingsViewVC.swift in Sources */,
+				59A87F202C18472700F0193C /* LocationsVC.swift in Sources */,
 				59A87F062C1844E800F0193C /* AppDelegate.swift in Sources */,
+				59A3BC472C1974DC003134E9 /* NotificationExtension.swift in Sources */,
+				59A3BC452C19715D003134E9 /* LocationsVM.swift in Sources */,
 				59A87F1E2C1846AC00F0193C /* MapViewVC.swift in Sources */,
 				59A87F082C1844E800F0193C /* SceneDelegate.swift in Sources */,
 				59A87F262C18853A00F0193C /* UserDefaultsExtension.swift in Sources */,

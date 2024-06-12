@@ -2,7 +2,7 @@ import UIKit
 import MapKit
 
 class MapViewVC: UIViewController, MKMapViewDelegate {
-    let callToActionButton = PMCustomButton(backgroundColor: UIColor.label.withAlphaComponent(0.9), title: "Konumumu Kaydet")
+    let callToActionButton = PMCustomButton(backgroundColor: UIColor.label.withAlphaComponent(0.9), title: "Save My Location")
     private var mapView: MKMapView!
     private var viewModel: MapVM
     private var shouldUpdateLocation = true
@@ -23,8 +23,19 @@ class MapViewVC: UIViewController, MKMapViewDelegate {
         bindViewModel()
         configureCallToActionButton()
         addPinsToMap() // Kaydedilen pinleri yükle
+        setupNotificationCenter()
     }
-    
+    private func setupNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleDidDeleteLocation), name: .didDeleteLocation, object: nil)
+    }
+
+    @objc private func handleDidDeleteLocation() {
+        addPinsToMap()
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     private func setupMapView() {
         mapView = MKMapView(frame: view.bounds)
         mapView.showsUserLocation = true
@@ -65,6 +76,7 @@ class MapViewVC: UIViewController, MKMapViewDelegate {
     @objc private func saveButtonTapped() {
         viewModel.saveCurrentLocation()
         addPinsToMap()
+        NotificationCenter.default.post(name: .didSaveLocation, object: nil)
     }
     
     private func addPinsToMap() {
@@ -72,10 +84,11 @@ class MapViewVC: UIViewController, MKMapViewDelegate {
         for location in viewModel.savedLocations {
             let annotation = MKPointAnnotation()
             annotation.coordinate = location.coordinate
-            annotation.title = "Kaydedilen Konum"
+            annotation.title = "Saved Location"
             mapView.addAnnotation(annotation)
         }
     }
+
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let coordinate = view.annotation?.coordinate else { return }
@@ -85,7 +98,7 @@ class MapViewVC: UIViewController, MKMapViewDelegate {
     private func openMapsAppWithDirections(to coordinate: CLLocationCoordinate2D) {
         let destinationPlacemark = MKPlacemark(coordinate: coordinate)
         let destinationItem = MKMapItem(placemark: destinationPlacemark)
-        destinationItem.name = "Kaydedilen Konum"
+        destinationItem.name = "Saved Location"
         
         let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         destinationItem.openInMaps(launchOptions: launchOptions)
