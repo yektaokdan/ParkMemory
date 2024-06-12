@@ -1,5 +1,5 @@
 # ParkMemory
-
+![ParkMemory Mockup](https://github.com/yektaokdan/ParkMemory/blob/main/image_for_readme/mockup.png?raw=true)
 ## Summary
 
 This project is an iOS application that allows users to save the location where they parked their car and list these saved locations.
